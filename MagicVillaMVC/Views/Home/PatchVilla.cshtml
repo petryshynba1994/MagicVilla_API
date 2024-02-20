@@ -1,0 +1,25 @@
+﻿@model MagicVillaMVC.Models.Villa
+
+@{
+    ViewData["Title"] = "EditVilla";
+}
+
+<h1>Edit Villa</h1>
+
+<form asp-action="PatchVilla" asp-controller="Home" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Name" class="control-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Details" class="control-label"></label>
+        <input asp-for="Details" class="form-control" />
+        <span asp-validation-for="Details" class="text-danger"></span>
+    </div>
+    <!-- Добавьте остальные поля для редактирования свойств виллы -->
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</form>
